@@ -8,6 +8,7 @@
 
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
+import MapboxGL from '@mapbox/react-native-mapbox-gl';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -17,13 +18,21 @@ const instructions = Platform.select({
 });
 
 type Props = {};
+
+
+  MapboxGL.setAccessToken('pk.eyJ1IjoiZGlzaGFuazk2IiwiYSI6ImNqdWtvczFvaTF1cTU0NG5xdzl4ZTFwZmMifQ.V-hMaHC3WpXI9s6F2V8vog');
+
+
 export default class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
+        <MapboxGL.MapView
+          showUserLocation={true}
+          zoomLevel={12}
+          userTrackingMode={MapboxGL.UserTrackingModes.Follow}
+          style={{flex : 1}}
+        />
       </View>
     );
   }
@@ -31,10 +40,9 @@ export default class App extends Component<Props> {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: 'blue'
   },
   welcome: {
     fontSize: 20,
@@ -46,4 +54,7 @@ const styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   },
+  map:{
+    backgroundColor: 'red'
+  }
 });
