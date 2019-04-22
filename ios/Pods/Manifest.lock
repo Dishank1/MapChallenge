@@ -72,10 +72,10 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/yoga/Yoga.podspec"
 
 SPEC CHECKSUMS:
-  React: 1fe0eb13d90b625d94c3b117c274dcfd2e760e11
-  react-native-mapbox-gl: b42480060cdcc515dfa3d8e403fb4dd32466a1b9
-  yoga: b1ce48b6cf950b98deae82838f5173ea7cf89e85
+  React: adbac0757ce35e92fbd447ab98c810209d27d9b0
+  react-native-mapbox-gl: d0ac3b81a6cadbd7cadc80891da72e3e85379350
+  yoga: 74cdf036c30820443b25ade59916236b1e95ee93
 
 PODFILE CHECKSUM: 4c3bfdfec3d9842016bd2b9795782b2ce434fc94
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.1
